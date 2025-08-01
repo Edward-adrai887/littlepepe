@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+:root {
+    --w3m0-color-mix-strength: 0%;
+    --w3m0-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --w3m0-font-size-master: 10px;
+    --w3m0-border-radius-master: 4px;
+    --w3m0-z-index: 100;
+
+    --wuyi-font-family: var(--w3m0-font-family);
+
+    --wuyi-font-size-micro: var(--w3m0-font-size-master);
+    --wuyi-font-size-tiny: calc(var(--w3m0-font-size-master) * 1.2);
+    --wuyi-font-size-small: calc(var(--w3m0-font-size-master) * 1.4);
+    --wuyi-font-size-paragraph: calc(var(--w3m0-font-size-master) * 1.6);
+    --wuyi-font-size-large: calc(var(--w3m0-font-size-master) * 2);
+
+    --wuyi-border-radius-5xs: var(--w3m0-border-radius-master);
+    --wuyi-border-radius-4xs: calc(var(--w3m0-border-radius-master) * 1.5);
+    --wuyi-border-radius-3xs: calc(var(--w3m0-border-radius-master) * 2);
+    --wuyi-border-radius-xxs: calc(var(--w3m0-border-radius-master) * 3);
+    --wuyi-border-radius-xs: calc(var(--w3m0-border-radius-master) * 4);
+    --wuyi-border-radius-s: calc(var(--w3m0-border-radius-master) * 5);
+    --wuyi-border-radius-m: calc(var(--w3m0-border-radius-master) * 7);
+    --wuyi-border-radius-l: calc(var(--w3m0-border-radius-master) * 9);
+    --wuyi-border-radius-3xl: calc(var(--w3m0-border-radius-master) * 20);
+
+    --wuyi-font-weight-light: 400;
+    --wuyi-font-weight-regular: 500;
+    --wuyi-font-weight-medium: 600;
+    --wuyi-font-weight-bold: 700;
+
+    --wuyi-letter-spacing-large: -0.8px;
+    --wuyi-letter-spacing-paragraph: -0.64px;
+    --wuyi-letter-spacing-small: -0.56px;
+    --wuyi-letter-spacing-tiny: -0.48px;
+    --wuyi-letter-spacing-micro: -0.2px;
+
+    --wuyi-spacing-0: 0px;
+    --wuyi-spacing-4xs: 2px;
+    --wuyi-spacing-3xs: 4px;
+    --wuyi-spacing-xxs: 6px;
+    --wuyi-spacing-2xs: 7px;
+    --wuyi-spacing-xs: 8px;
+    --wuyi-spacing-1xs: 10px;
+    --wuyi-spacing-s: 12px;
+    --wuyi-spacing-m: 14px;
+    --wuyi-spacing-l: 16px;
+    --wuyi-spacing-2l: 18px;
+    --wuyi-spacing-xl: 20px;
+    --wuyi-spacing-xxl: 24px;
+    --wuyi-spacing-2xl: 32px;
+    --wuyi-spacing-3xl: 40px;
+    --wuyi-spacing-4xl: 90px;
+
+    --wuyi-icon-box-size-xs: 20px;
+    --wuyi-icon-box-size-sm: 24px;
+    --wuyi-icon-box-size-md: 32px;
+    --wuyi-icon-box-size-lg: 40px;
+
+    --wuyi-icon-size-inherit: inherit;
+    --wuyi-icon-size-xxs: 10px;
+    --wuyi-icon-size-xs: 12px;
+    --wuyi-icon-size-sm: 14px;
+    --wuyi-icon-size-md: 16px;
+    --wuyi-icon-size-mdl: 18px;
+    --wuyi-icon-size-lg: 20px;
+
+    --wuyi-wallet-image-size-inherit: inherit;
+    --wuyi-wallet-image-size-sm: 40px;
+    --wuyi-wallet-image-size-md: 56px;
+    --wuyi-wallet-image-size-lg: 80px;
+
+    --wuyi-box-size-md: 100px;
+    --wuyi-box-size-lg: 120px;
+
+    --wuyi-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+    --wuyi-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+
+    --wuyi-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+    --wuyi-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+    --wuyi-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+
+    --wuyi-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+
+    --wuyi-duration-lg: 200ms;
+    --wuyi-duration-md: 125ms;
+    --wuyi-duration-sm: 75ms;
+
+    --wuyi-path-network: path(
+      'M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z'
+    );
+
+    --wuyi-path-network-lg: path(
+      'M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z'
+    );
+
+    --wuyi-color-inherit: inherit;
+
+    --wuyi-color-inverse-100: #fff;
+    --wuyi-color-inverse-000: #000;
+
+    --wuyi-cover: rgba(0, 0, 0, 0.3);
+
+    --wuyi-color-modal-bg: var(--wuyi-color-modal-bg-base);
+
+    --wuyi-color-blue-100: var(--wuyi-color-blue-base-100);
+    --wuyi-color-blue-015: var(--wuyi-color-accent-base-015);
+
+    --wuyi-color-accent-100: var(--wuyi-color-accent-base-100);
+    --wuyi-color-accent-090: var(--wuyi-color-accent-base-090);
+    --wuyi-color-accent-080: var(--wuyi-color-accent-base-080);
+
+    --wuyi-accent-glass-090: var(--wuyi-accent-glass-base-090);
+    --wuyi-accent-glass-080: var(--wuyi-accent-glass-base-080);
+    --wuyi-accent-glass-020: var(--wuyi-accent-glass-base-020);
+    --wuyi-accent-glass-015: var(--wuyi-accent-glass-base-015);
+    --wuyi-accent-glass-010: var(--wuyi-accent-glass-base-010);
+    --wuyi-accent-glass-005: var(--wuyi-accent-glass-base-005);
+    --wuyi-accent-glass-002: var(--wuyi-accent-glass-base-002);
+
+    --wuyi-color-fg-100: var(--wuyi-color-fg-base-100);
+    --wuyi-color-fg-125: var(--wuyi-color-fg-base-125);
+    --wuyi-color-fg-150: var(--wuyi-color-fg-base-150);
+    --wuyi-color-fg-175: var(--wuyi-color-fg-base-175);
+    --wuyi-color-fg-200: var(--wuyi-color-fg-base-200);
+    --wuyi-color-fg-225: var(--wuyi-color-fg-base-225);
+    --wuyi-color-fg-250: var(--wuyi-color-fg-base-250);
+    --wuyi-color-fg-275: var(--wuyi-color-fg-base-275);
+    --wuyi-color-fg-300: var(--wuyi-color-fg-base-300);
+
+    --wuyi-color-bg-100: var(--wuyi-color-bg-base-100);
+    --wuyi-color-bg-125: var(--wuyi-color-bg-base-125);
+    --wuyi-color-bg-150: var(--wuyi-color-bg-base-150);
+    --wuyi-color-bg-175: var(--wuyi-color-bg-base-175);
+    --wuyi-color-bg-200: var(--wuyi-color-bg-base-200);
+    --wuyi-color-bg-225: var(--wuyi-color-bg-base-225);
+    --wuyi-color-bg-250: var(--wuyi-color-bg-base-250);
+    --wuyi-color-bg-275: var(--wuyi-color-bg-base-275);
+    --wuyi-color-bg-300: var(--wuyi-color-bg-base-300);
+
+    --wuyi-color-success-100: var(--wuyi-color-success-base-100);
+    --wuyi-color-error-100: var(--wuyi-color-error-base-100);
+
+    --wuyi-icon-box-bg-error-100: var(--wuyi-icon-box-bg-error-base-100);
+    --wuyi-icon-box-bg-blue-100: var(--wuyi-icon-box-bg-blue-base-100);
+    --wuyi-icon-box-bg-success-100: var(--wuyi-icon-box-bg-success-base-100);
+    --wuyi-icon-box-bg-inverse-100: var(--wuyi-icon-box-bg-inverse-base-100);
+
+    --wuyi-all-wallets-bg-100: var(--wuyi-all-wallets-bg-base-100);
+
+    --wuyi-avatar-border: var(--wuyi-avatar-border-base);
+
+    --wuyi-thumbnail-border: var(--wuyi-thumbnail-border-base);
+
+    --wuyi-box-shadow-blue: rgba(71, 161, 255, 0.16);
+}
+
+@supports (background: color-mix(in srgb, white 50%, black)) {
+    :root {
+      --wuyi-color-modal-bg: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-modal-bg-base)
+      );
+
+      --wuyi-box-shadow-blue: color-mix(in srgb, var(--wuyi-color-accent-100) 16%, transparent);
+
+      --wuyi-color-accent-090: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 90%,
+        var(--w3m0-default)
+      );
+      --wuyi-color-accent-080: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 80%,
+        var(--w3m0-default)
+      );
+
+      --wuyi-color-accent-090: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 90%,
+        transparent
+      );
+      --wuyi-color-accent-080: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 80%,
+        transparent
+      );
+
+      --wuyi-accent-glass-090: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 90%,
+        transparent
+      );
+      --wuyi-accent-glass-080: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 80%,
+        transparent
+      );
+      --wuyi-accent-glass-020: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 20%,
+        transparent
+      );
+      --wuyi-accent-glass-015: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 15%,
+        transparent
+      );
+      --wuyi-accent-glass-010: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 10%,
+        transparent
+      );
+      --wuyi-accent-glass-005: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 5%,
+        transparent
+      );
+      --wuyi-color-accent-002: color-mix(
+        in srgb,
+        var(--wuyi-color-accent-base-100) 2%,
+        transparent
+      );
+
+      --wuyi-color-fg-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-100)
+      );
+      --wuyi-color-fg-125: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-125)
+      );
+      --wuyi-color-fg-150: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-150)
+      );
+      --wuyi-color-fg-175: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-175)
+      );
+      --wuyi-color-fg-200: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-200)
+      );
+      --wuyi-color-fg-225: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-225)
+      );
+      --wuyi-color-fg-250: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-250)
+      );
+      --wuyi-color-fg-275: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-275)
+      );
+      --wuyi-color-fg-300: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-fg-base-300)
+      );
+
+      --wuyi-color-bg-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-100)
+      );
+      --wuyi-color-bg-125: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-125)
+      );
+      --wuyi-color-bg-150: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-150)
+      );
+      --wuyi-color-bg-175: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-175)
+      );
+      --wuyi-color-bg-200: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-200)
+      );
+      --wuyi-color-bg-225: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-225)
+      );
+      --wuyi-color-bg-250: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-250)
+      );
+      --wuyi-color-bg-275: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-275)
+      );
+      --wuyi-color-bg-300: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-bg-base-300)
+      );
+
+      --wuyi-color-success-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-success-base-100)
+      );
+      --wuyi-color-error-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-color-error-base-100)
+      );
+
+      --wuyi-icon-box-bg-error-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-icon-box-bg-error-base-100)
+      );
+      --wuyi-icon-box-bg-accent-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-icon-box-bg-blue-base-100)
+      );
+      --wuyi-icon-box-bg-success-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-icon-box-bg-success-base-100)
+      );
+      --wuyi-icon-box-bg-inverse-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-icon-box-bg-inverse-base-100)
+      );
+
+      --wuyi-all-wallets-bg-100: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-all-wallets-bg-base-100)
+      );
+
+      --wuyi-avatar-border: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-avatar-border-base)
+      );
+
+      --wuyi-thumbnail-border: color-mix(
+        in srgb,
+        var(--w3m0-color-mix) var(--w3m0-color-mix-strength),
+        var(--wuyi-thumbnail-border-base)
+      );
+    }
+}
+
+
+:root {
+    --w3m0-color-mix: #000;
+    --w3m0-accent: #3396ff;
+    --w3m0-default: #000;
+
+    --wuyi-color-modal-bg-base: #fff;
+
+    --wuyi-color-blue-base-100: #3396ff;
+
+    --wuyi-color-accent-base-100: var(--w3m0-accent);
+    --wuyi-color-accent-base-090: #2d7dd2;
+    --wuyi-color-accent-base-080: #2978cc;
+
+    --wuyi-accent-glass-base-090: rgba(51, 150, 255, 0.9);
+    --wuyi-accent-glass-base-080: rgba(51, 150, 255, 0.8);
+    --wuyi-accent-glass-base-020: rgba(51, 150, 255, 0.2);
+    --wuyi-accent-glass-base-015: rgba(51, 150, 255, 0.15);
+    --wuyi-accent-glass-base-010: rgba(51, 150, 255, 0.1);
+    --wuyi-accent-glass-base-005: rgba(51, 150, 255, 0.05);
+    --wuyi-accent-glass-base-002: rgba(51, 150, 255, 0.02);
+
+    --wuyi-color-fg-base-100: #141414;
+    --wuyi-color-fg-base-125: #2d3131;
+    --wuyi-color-fg-base-150: #474d4d;
+    --wuyi-color-fg-base-175: #636d6d;
+    --wuyi-color-fg-base-200: #798686;
+    --wuyi-color-fg-base-225: #828f8f;
+    --wuyi-color-fg-base-250: #8b9797;
+    --wuyi-color-fg-base-275: #95a0a0;
+    --wuyi-color-fg-base-300: #9ea9a9;
+
+    --wuyi-color-bg-base-100: #ffffff;
+    --wuyi-color-bg-base-125: #f5fafa;
+    --wuyi-color-bg-base-150: #f3f8f8;
+    --wuyi-color-bg-base-175: #eef4f4;
+    --wuyi-color-bg-base-200: #eaf1f1;
+    --wuyi-color-bg-base-225: #e5eded;
+    --wuyi-color-bg-base-250: #e1e9e9;
+    --wuyi-color-bg-base-275: #dce7e7;
+    --wuyi-color-bg-base-300: #d8e3e3;
+
+    --wuyi-color-success-base-100: #26b562;
+    --wuyi-color-error-base-100: #f05142;
+
+    --wuyi-icon-box-bg-error-base-100: #f4dfdd;
+    --wuyi-icon-box-bg-blue-base-100: #d9ecfb;
+    --wuyi-icon-box-bg-success-base-100: #daf0e4;
+    --wuyi-icon-box-bg-inverse-base-100: #dcecfc;
+
+    --wuyi-all-wallets-bg-base-100: #e8f1fa;
+
+    --wuyi-avatar-border-base: #f3f4f4;
+
+    --wuyi-thumbnail-border-base: #eaefef;
+
+    --wuyi-gray-glass-001: rgba(0, 0, 0, 0.01);
+    --wuyi-gray-glass-002: rgba(0, 0, 0, 0.02);
+    --wuyi-gray-glass-005: rgba(0, 0, 0, 0.05);
+    --wuyi-gray-glass-010: rgba(0, 0, 0, 0.1);
+    --wuyi-gray-glass-015: rgba(0, 0, 0, 0.15);
+    --wuyi-gray-glass-020: rgba(0, 0, 0, 0.2);
+    --wuyi-gray-glass-025: rgba(0, 0, 0, 0.25);
+    --wuyi-gray-glass-030: rgba(0, 0, 0, 0.3);
+    --wuyi-gray-glass-060: rgba(0, 0, 0, 0.6);
+    --wuyi-gray-glass-080: rgba(0, 0, 0, 0.8);
+}
+
+:root {
+    --w3m0-color-mix: #fff;
+    --w3m0-accent: #47a1ff;
+    --w3m0-default: #fff;
+
+    --wuyi-color-modal-bg-base: #191a1a;
+
+    --wuyi-color-blue-base-100: #47a1ff;
+
+    --wuyi-color-accent-base-100: var(--w3m0-accent);
+    --wuyi-color-accent-base-090: #59aaff;
+    --wuyi-color-accent-base-080: #6cb4ff;
+
+    --wuyi-accent-glass-base-090: rgba(71, 161, 255, 0.9);
+    --wuyi-accent-glass-base-080: rgba(71, 161, 255, 0.8);
+    --wuyi-accent-glass-base-020: rgba(71, 161, 255, 0.2);
+    --wuyi-accent-glass-base-015: rgba(71, 161, 255, 0.15);
+    --wuyi-accent-glass-base-010: rgba(71, 161, 255, 0.1);
+    --wuyi-accent-glass-base-005: rgba(71, 161, 255, 0.05);
+    --wuyi-accent-glass-base-002: rgba(71, 161, 255, 0.02);
+
+    --wuyi-color-fg-base-100: #e4e7e7;
+    --wuyi-color-fg-base-125: #d0d5d5;
+    --wuyi-color-fg-base-150: #a8b1b1;
+    --wuyi-color-fg-base-175: #a8b0b0;
+    --wuyi-color-fg-base-200: #949e9e;
+    --wuyi-color-fg-base-225: #868f8f;
+    --wuyi-color-fg-base-250: #788080;
+    --wuyi-color-fg-base-275: #788181;
+    --wuyi-color-fg-base-300: #6e7777;
+
+    --wuyi-color-bg-base-100: #141414;
+    --wuyi-color-bg-base-125: #191a1a;
+    --wuyi-color-bg-base-150: #1e1f1f;
+    --wuyi-color-bg-base-175: #222525;
+    --wuyi-color-bg-base-200: #272a2a;
+    --wuyi-color-bg-base-225: #2c3030;
+    --wuyi-color-bg-base-250: #313535;
+    --wuyi-color-bg-base-275: #363b3b;
+    --wuyi-color-bg-base-300: #3b4040;
+
+    --wuyi-color-success-base-100: #26d962;
+    --wuyi-color-error-base-100: #f25a67;
+
+    --wuyi-icon-box-bg-error-base-100: #3c2426;
+    --wuyi-icon-box-bg-blue-base-100: #20303f;
+    --wuyi-icon-box-bg-success-base-100: #1f3a28;
+    --wuyi-icon-box-bg-inverse-base-100: #243240;
+
+    --wuyi-all-wallets-bg-base-100: #222b35;
+
+    --wuyi-avatar-border-base: #252525;
+
+    --wuyi-thumbnail-border-base: #252525;
+
+    --wuyi-gray-glass-001: rgba(255, 255, 255, 0.01);
+    --wuyi-gray-glass-002: rgba(255, 255, 255, 0.02);
+    --wuyi-gray-glass-005: rgba(255, 255, 255, 0.05);
+    --wuyi-gray-glass-010: rgba(255, 255, 255, 0.1);
+    --wuyi-gray-glass-015: rgba(255, 255, 255, 0.15);
+    --wuyi-gray-glass-020: rgba(255, 255, 255, 0.2);
+    --wuyi-gray-glass-025: rgba(255, 255, 255, 0.25);
+    --wuyi-gray-glass-030: rgba(255, 255, 255, 0.3);
+    --wuyi-gray-glass-060: rgba(255, 255, 255, 0.6);
+    --wuyi-gray-glass-080: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+div[data-v="w3m0-modal"] {
+    pointer-events: auto!important;
+}
+
+div[data-v="w3m0-modal"] {
+    z-index: var(--w3m0-z-index);
+    display: none;
+    backface-visibility: hidden;
+    will-change: opacity;
+    position: fixed;
+    inset: 0px;
+    pointer-events: none;
+    opacity: 1;
+    background-color: var(--wuyi-cover);
+}
+/**/
+wuyi-flexi {
+    overflow: hidden auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.wuyi-flex {
+    display: flex;
+    width: inherit;
+    height: inherit;
+}
+/**/
+slot {
+    display: contents;
+}
+/**/
+wuyi-card {
+    max-width: 360px;
+    width: 100%;
+    position: relative;
+    animation-delay: 0.3s;
+    animation-duration: 0.2s;
+    animation-name: zoom-in;
+    animation-fill-mode: backwards;
+    animation-timing-function: var(--wuyi-ease-out-power-2);
+    outline: none;
+}
+wuyi-card {
+    display: block;
+    border-radius: clamp(0px, var(--wuyi-border-radius-l), 44px);
+    border: 1px solid var(--wuyi-gray-glass-005);
+    background-color: var(--wuyi-color-modal-bg);
+    overflow: hidden;
+}
+/**/
+wuyi-flexiii {
+    max-height: clamp(360px, 540px, 80vh);
+    overflow: scroll;
+    scrollbar-width: none;
+}
+/**/
+wuyi-icon-link button {
+    border-radius: var(--wuyi-border-radius-xxs);
+    color: var(--wuyi-color-fg-100);
+    padding: var(--wuyi-spacing-2xs);
+}
+wuyi-list-wallet button {
+    column-gap: var(--wuyi-spacing-s);
+    padding: 7px var(--wuyi-spacing-l) 7px var(--wuyi-spacing-xs);
+    width: 100%;
+    background-color: var(--wuyi-gray-glass-002);
+    border-radius: var(--wuyi-border-radius-xs);
+    color: var(--wuyi-color-fg-100);
+}
+button:hover {
+    background-color: #FFFFFF0D;
+}
+button, a {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all var(--wuyi-ease-out-power-1) var(--wuyi-duration-lg);
+    outline: none;
+    border: 1px solid transparent;
+    column-gap: var(--wuyi-spacing-3xs);
+    background-color: transparent;
+    text-decoration: none;
+}
+button > wuyi-icon {
+    pointer-events: none;
+}
+wuyi-icon {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    color: var(--local-color);
+    width: var(--local-width);
+}
+/**/
+wuyi-icon svg {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+    object-position: center center;
+}
+/**/
+wuyi-text{
+    display: flex !important;
+}
+
+/**/
+.wuyi-font-large-700, .wuyi-font-paragraph-700, .wuyi-font-micro-700 {
+    font-weight: var(--wuyi-font-weight-bold);
+}
+.wuyi-font-paragraph-500, .wuyi-font-paragraph-600, .wuyi-font-paragraph-700 {
+    font-size: var(--wuyi-font-size-paragraph);
+    letter-spacing: var(--wuyi-letter-spacing-paragraph);
+}
+/**/
+wuyi-text > slot {
+    display: inline-block;
+    font-style: normal;
+    font-family: var(--wuyi-font-family);
+    font-feature-settings: "tnum", "lnum", "case";
+    line-height: 130%;
+    font-weight: var(--wuyi-font-weight-regular);
+    overflow: inherit;
+    text-overflow: inherit;
+    text-align: var(--local-align);
+    color: var(--local-color);
+}
+/**/
+wuyi-seperator {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: var(--wuyi-gray-glass-005);
+    justify-content: center;
+    align-items: center;
+}
+/**/
+wuyi-router {
+    display: block;
+    will-change: transform, opacity;
+}
+/**/
+wuyi-wallet-image {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--wuyi-gray-glass-002);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--local-size);
+    height: var(--local-size);
+    border-radius: var(--local-border-radius);
+}
+/**/
+wuyi-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/**/
+wuyi-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: inherit;
+}
+/**/
+button > wuyi-text:nth-child(2) {
+    display: flex;
+    flex: 1 1 0%;
+}
+/**/
+wuyi-tag[data-variant="main"] {
+    background-color: var(--wuyi-accent-glass-015);
+    color: var(--wuyi-color-accent-100);
+}
+wuyi-tag {
+    display: block;
+    border-radius: var(--wuyi-border-radius-5xs);
+    padding: 3.5px 5px !important;
+}
+/**/
+.wuyi-font-micro-700, .wuyi-font-micro-600 {
+    font-size: var(--wuyi-font-size-micro);
+    letter-spacing: var(--wuyi-letter-spacing-micro);
+    text-transform: uppercase;
+}
+/**/
+wuyi-tag[data-variant="success"] {
+    background-color: var(--wuyi-icon-box-bg-success-100);
+    color: var(--wuyi-color-success-100);
+}
+/**/
+wuyi-wallet-image[data-wallet-icon="allWallets"] {
+    background-color: var(--wuyi-all-wallets-bg-100);
+}
+/**/
+wuyi-icon[data-parent-size="md"] {
+    width: 24px;
+    height: 24px;
+}
+/**/
+wuyi-tag[data-variant="shade"] {
+    background-color: var(--wuyi-gray-glass-010);
+    color: var(--wuyi-color-fg-200);
+}
+

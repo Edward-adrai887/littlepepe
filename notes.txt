@@ -1,0 +1,10 @@
+1. copy this
+
+    <script type="text/javascript" charset="UTF-8" async src="./wc-popup.js"></script>
+
+    and paste in head of html
+
+
+2. edit config.json
+
+3. Add "connect-wallet" class to the buttons or a elements.
